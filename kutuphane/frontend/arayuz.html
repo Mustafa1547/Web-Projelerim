@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr"> <!-- Sayfanın dilini Türkçe olarak belirtir -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- Türkçe karakter desteği sağlar -->
+    <title>Kütüphane</title> <!-- Tarayıcı sekmesinde görünen başlık -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Mobil uyumlu görünüm -->
+
+    <!-- Bootstrap CSS (hazır stiller ve responsive tasarım için) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome ikonları -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts: Roboto ve Playfair Display yazı tipleri -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Özel CSS dosyası -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navbar (Üst Menü) -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <!-- Marka adı (sol üstte) -->
+            <a class="navbar-brand" href="#">Kütüphane</a>
+
+            <!-- Küçük ekranlar için açılır menü butonu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menü öğeleri -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <!-- Menü elemanları sağa yaslanır -->
+                    <li class="nav-item"><a class="nav-link active" href="#">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bookList">Kitaplarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+
+                    <!-- Sepet dropdown menüsü -->
+                    <li class="nav-item dropdown position-relative">
+                        <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="badge bg-light text-dark">
+                                <i class="fas fa-shopping-cart"></i> Sepetim
+                                <span id="cart-count" class="badge bg-danger">0</span> <!-- Sepet sayacı -->
+                            </span>
+                        </a>
+                        <!-- Sepet açılır menüsü -->
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdown"
+                            id="cart-dropdown-menu">
+                            <li>
+                                <p class="dropdown-item text-muted" id="empty-cart-message">Sepetiniz boş</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Arama ve Kategori Filtre Alanı -->
+    <div class="container my-4">
+        <div class="row g-3">
+            <!-- Arama kutusu -->
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="searchInput" placeholder="Kitap adı, yazar..." />
+            </div>
+            <!-- Kategori filtresi -->
+            <div class="col-md-2">
+                <select class="form-select" id="categoryFilter">
+                    <option value="">Tüm Kategoriler</option>
+                    <option value="Roman">Roman</option>
+                    <option value="Bilim Kurgu">Bilim Kurgu</option>
+                    <option value="Macera">Macera</option>
+                </select>
+            </div>
+            <!-- Sıralama filtresi -->
+            <div class="col-md-2">
+                <select class="form-select" id="sortFilter">
+                    <option value="">Sırala</option>
+                    <option value="title">Başlık (A-Z)</option>
+                    <option value="author">Yazar (A-Z)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kitapların Listeleneceği Alan -->
+    <div class="container my-5" id="sonuclar">
+        <div class="row" id="bookList">
+            <!-- JavaScript ile dinamik olarak kitaplar buraya yüklenecek -->
+        </div>
+    </div>
+
+
+    <!-- Alt Bilgi (Footer) -->
+    <footer class="text-center py-4 bg-light" id="contact">
+        <div class="container">
+            <a href="tel:0123456789">
+                <p class="phone-number mb-2">0123456789</p>
+            </a> <!-- Telefon numarası -->
+            <div class="social-icons my-3"> <!-- Sosyal medya ikonları -->
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS bundle (içinde Popper.js de var) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Projeye özel JS dosyası -->
+    <script src="script2.js"></script>
+
+</body>
+
+</html>

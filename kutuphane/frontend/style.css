@@ -1,0 +1,248 @@
+:root {
+    --primary-color: #2c3e50; /* Ana tema rengi */
+    --secondary-color: #e74c3c; /* İkincil renk */
+    --accent-color: #f1c40f; /* Vurgu (highlight) rengi */
+    --background-light: #f8f9fa; /* Açık tema arkaplan rengi */
+    --background-dark: #1a252f; /* Koyu tema arkaplan rengi */
+    --text-light: #2c3e50; /* Açık tema metin rengi */
+    --text-dark: #ecf0f1; /* Koyu tema metin rengi */
+    --mybooks-background: #74b9ff; /* "My Books" arka plan rengi */
+    --card-color-1: #fab1a0; /* Kart arka planı için coral rengi */
+    --card-color-2: #55efc4; /* Kart arka planı için mint yeşili */
+    --card-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Kart gölgelendirmesi */
+}
+
+
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Menüde degrade arka plan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Navbar gölgelendirmesi */
+    transition: background 0.5s ease; /* Arka plan geçişi */
+}
+
+.navbar-brand, .nav-link {
+    font-family: 'Playfair Display', serif; /* Menü yazı tipi */
+    color: white !important; /* Menü metin rengi */
+  
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important; /* Hover durumunda vurgu rengi */
+    transform: scale(1.1); /* Hover durumunda büyüme */
+}
+
+.search-bar {
+    max-width: 800px; /* Arama çubuğu maksimum genişlik */
+    margin: 40px auto; /* Ortalamak için dış boşluk */
+    position: relative;
+    animation: slideIn 0.5s ease; /* Giriş animasyonu */
+}
+
+.book-card {
+    border: none;
+    border-radius: 15px !important; /* Kart köşelerini yuvarlak yap */
+    overflow: hidden;  /* Taşan içerikleri gizle */
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Hafif degrade arka plan */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Yumuşak geçiş efektleri */
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.book-card .card-body {
+    padding: 25px; /* İç boşluk */
+    position: relative;
+}
+
+
+
+footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Footer arka planı degrade renk */
+    color: white; /* Yazı rengi beyaz */
+    padding: 40px 0; /* Üst ve alt boşluk */
+    margin-top: 80px; /* Üstten boşluk */
+    position: relative; /* Konumlandırma için göreceli pozisyon */
+    overflow: hidden; /* Taşan içerikleri gizle */
+}
+
+footer a {
+    text-decoration: none; /* Link alt çizgisini kaldır */
+    color: white; /* Link yazı rengi beyaz */
+}
+
+footer a:hover {
+    color: var(--accent-color); /* Üzerine gelince vurgu rengi değişir */
+}
+
+footer .social-icons a {
+    color: white; /* Sosyal ikonların rengi beyaz */
+    font-size: 1.5rem; /* Yazı tipi büyüklüğü */
+    margin: 0 10px; /* Yatayda boşluk */
+    transition: color 0.3s ease, transform 0.3s ease; /* Renk ve ölçek geçiş animasyonu */
+}
+
+footer .social-icons a:hover {
+    color: var(--accent-color); /* Hoverda vurgu rengi */
+    transform: scale(1.2); /* Hoverda ikon büyütme efekti */
+}
+
+.theme-toggle {
+    cursor: pointer; /* Üzerine gelince fare imleci el olur */
+    font-size: 1.4rem; /* Yazı büyüklüğü */
+    transition: color 0.3s ease, transform 0.3s ease; /* Geçiş animasyonları */
+}
+
+
+
+
+
+
+
+
+/* Kitap ekleme sayfası arka planı */
+/* Kitap ekleme sayfası arka planı */
+#bodbookaddbodyy {
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2); /* Sağdan sola açık mavi geçişli arka plan */
+    min-height: 100vh; /* Sayfanın en az ekran yüksekliği kadar olmasını sağlar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Kullanılacak yazı tipi ailesi */
+}
+
+/* Navbar genel stil ayarları */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Hafif alt gölge ile derinlik efekti */
+}
+
+/* Kartlar için görsel düzenlemeler */
+.card {
+    border-radius: 1rem; /* Kart köşelerini yumuşatır (16px) */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Kartın çevresine yumuşak gölge verir */
+}
+
+/* Form etiketlerinin kalınlığı */
+.form-label {
+    font-weight: 600; /* Yarı kalın yazı */
+}
+
+/* Uyarı kutusu için animasyon tanımı */
+#uyari {
+    animation: fadeIn 0.5s ease-in-out; /* Saydamlıktan görünürlüğe geçiş animasyonu */
+}
+
+
+/* Başarı butonları (yeşil) için tam genişlik */
+.btn-success {
+    width: 100%; /* Buton satırı tamamen kaplasın */
+}
+
+
+
+
+
+
+/* Giriş ekranı gövde tasarımı */
+#loginbody {
+    background: grey; /* Gri arka plan */
+    min-height: 100vh; /* Ekranı tam kaplar */
+    display: flex; /* Ortalamak için flex kullanılır */
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    font-family: 'Segoe UI', sans-serif; /* Yazı tipi */
+}
+
+/* Giriş kutusu (kullanıcı adı/şifre formu) */
+.login-box {
+    background-color: #ffffff; /* Beyaz zemin */
+    padding: 40px; /* İç boşluk */
+    border-radius: 20px; /* Köşeler yuvarlak */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Belirgin kutu gölgesi */
+    width: 100%; 
+    max-width: 420px; /* Eni maksimum 420px olur */
+    animation: fadeIn 1s ease-in-out; /* Görünme animasyonu */
+}
+
+/* Giriş kutusundaki başlık ayarları */
+.login-box h2 {
+    text-align: center; /* Ortalanır */
+    margin-bottom: 25px; /* Alt boşluk */
+    color: #333; /* Koyu gri yazı rengi */
+    font-weight: 600; /* Yarı kalın */
+}
+
+/* Özel tasarımlı mavi geçişli buton */
+.btn-gradient {
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Açık maviden koyu maviye geçiş */
+    border: none; /* Kenarlık yok */
+    color: white; /* Yazı rengi beyaz */
+    padding: 10px; /* İç boşluk */
+    width: 100%; /* Tam genişlik */
+    border-radius: 8px; /* Hafif yuvarlak köşe */
+    font-weight: bold; /* Kalın yazı */
+    transition: 0.3s ease; /* Hover geçişi yumuşak */
+}
+
+/* Hover (üzerine gelindiğinde) efekti */
+.btn-gradient:hover {
+    opacity: 0.9; /* Hafif saydamlık */
+    transform: scale(1.02); /* Hafif büyüme efekti */
+}
+
+/* Şifremi unuttum bağlantısı */
+.forgot-link {
+    display: block; /* Satır blok olarak yer alır */
+    margin-top: 10px; /* Üst boşluk */
+    text-align: right; /* Sağa yasla */
+    font-size: 14px; /* Küçük yazı */
+    text-decoration: none; /* Alt çizgi kaldırılır */
+    color: #0072ff; /* Mavi yazı rengi */
+}
+
+/* Üzerine gelince altı çizilen bağlantı */
+.forgot-link:hover {
+    text-decoration: underline; /* Hover durumunda altı çizilir */
+}
+
+
+
+
+
+
+
+/* Müşteri paneli arka planı */
+#customerpagebody {
+    background-color: #f8f9fa; /* Açık gri zemin */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar gölgelendirme (müşteri paneli için) */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Hafif gölge */
+}
+
+/* Sayfa başındaki başlık kartı */
+.header-card {
+    margin-top: 20px; /* Üst boşluk */
+    border-radius: 15px; /* Yuvarlak köşe */
+    background: linear-gradient(to right, #00b09b, #96c93d); /* Yeşil geçişli arka plan */
+    color: white; /* Yazı rengi beyaz */
+    padding: 30px; /* İç boşluk */
+    text-align: center; /* Ortalanmış metin */
+}
+
+/* Tabloyu saran kutunun stil ayarları */
+.table-container {
+    margin: 40px auto; /* Üst-alt boşluk ve yatay ortalama */
+    max-width: 1000px; /* Genişlik sınırı */
+    background: white; /* Beyaz zemin */
+    border-radius: 15px; /* Yuvarlak köşe */
+    padding: 20px; /* İç boşluk */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Hafif dış gölge */
+}
+
+/* Tablodaki resimlerin köşelerini yuvarlama */
+table img {
+    border-radius: 8px; /* Resim köşeleri yumuşak */
+}
+
+
+
