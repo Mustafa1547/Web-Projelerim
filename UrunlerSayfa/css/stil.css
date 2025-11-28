@@ -1,0 +1,14 @@
+    /* Circle Avatar için stil */
+    .navbar-brand {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;  /* Yuvarlak avatarın çapı */
+      height: 50px;
+      background-color: white;  /* Arkaplanı beyaz yapıyoruz */
+      border-radius: 50%;  /* Yuvarlak hale getirmek için */
+      font-weight: bold;  /* Yazı kalınlığını artırıyoruz */
+      color: #28a745;  /* Yeşil renk (navbar'daki renk ile uyumlu) */
+      text-decoration: none;  /* Link altındaki çizgiyi kaldırıyoruz */
+      font-size: 20px;  /* Yazı boyutunu ayarlıyoruz */
+    }
