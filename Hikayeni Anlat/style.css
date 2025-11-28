@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.navbar {
+    background-color:  rgba(255, 255, 255, 0.1);;
+    height: 80px;
+ 
+    
+}
+.navbar-title {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 50px;
+}
+.user-buttons {
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
+.user-buttons a {
+    border-radius: 100px;
+    border: #ffffff;
+    margin-right: 20px;
+}
+.user-buttons a {
+    text-decoration: none;
+}
+
+
+
+header {
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.tabs {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.tab {
+    padding: 15px 30px;
+    margin: 0 10px;
+    border: none;
+    background: transparent;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tab.active {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.content-section {
+    display: none;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.btn-share{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-share:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1em;
+}
+
+      
+.story-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }     
+.story-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+               
+        
+.story-content {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+
+               
+.story-actions {
+            margin-left: 25px;
+            margin-bottom: 25px;
+            
+            
+        }
+        
+.story_like, .story_comment {
+            background: none;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 8px 20px;
+            margin-left: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+.story_like:hover, .story_comment:hover {
+            background: #667eea;
+            color: white;
+            
+        }
+.story_like .heart-icon {
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  color: gray; /* Başlangıçta gri (beyaz benzeri) */
+}
+.story_like.liked{
+        background: #e74c3c;
+        border-color: #e74c3c;
+        color: white;
+}
+.story_like.liked .like-count {
+    color: white;
+}
+
+.story_like.liked .heart-icon {
+  color: red;/* Beğenince kırmızı */
+  
+}
+.comment-box {
+    display: flex;
+    gap: 8px; /* input ile buton arasındaki boşluk */
+    margin-top: 10px;
+}
+
+.comment-box .comment-input {
+    border-radius: 40px;
+    flex: 1; /* input geniş alanı kaplasın */
+    font-size: 15px; /* yazı boyutu */
+    padding: 4px 8px; /* iç boşluk */
+    height: 40px;
+     /* yükseklik */
+}
+
+.comment-box .btn-submit {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab {
+        margin: 5px 0;
+        width: 200px;
+    }
+}
+
+
+
+/* Giriş ekranı gövde tasarımı */
+#loginbody {
+    background: grey; /* Gri arka plan */
+    min-height: 100vh; /* Ekranı tam kaplar */
+    display: flex; /* Ortalamak için flex kullanılır */
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    font-family: 'Segoe UI', sans-serif; /* Yazı tipi */
+}
+
+/* Giriş kutusu (kullanıcı adı/şifre formu) */
+.login-box {
+    background-color: #ffffff; /* Beyaz zemin */
+    padding: 40px; /* İç boşluk */
+    border-radius: 20px; /* Köşeler yuvarlak */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Belirgin kutu gölgesi */
+    width: 100%; 
+    max-width: 420px; /* Eni maksimum 420px olur */
+    animation: fadeIn 1s ease-in-out; /* Görünme animasyonu */
+}
+
+/* Giriş kutusundaki başlık ayarları */
+.login-box h2 {
+    text-align: center; /* Ortalanır */
+    margin-bottom: 25px; /* Alt boşluk */
+    color: #333; /* Koyu gri yazı rengi */
+    font-weight: 600; /* Yarı kalın */
+}
+
+/* Özel tasarımlı mavi geçişli buton */
+.btn-gradient {
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Açık maviden koyu maviye geçiş */
+    border: none; /* Kenarlık yok */
+    color: white; /* Yazı rengi beyaz */
+    padding: 10px; /* İç boşluk */
+    width: 100%; /* Tam genişlik */
+    border-radius: 8px; /* Hafif yuvarlak köşe */
+    font-weight: bold; /* Kalın yazı */
+    transition: 0.3s ease; /* Hover geçişi yumuşak */
+}
+
+/* Hover (üzerine gelindiğinde) efekti */
+.btn-gradient:hover {
+    opacity: 0.9; /* Hafif saydamlık */
+    transform: scale(1.02); /* Hafif büyüme efekti */
+}
+
+/* Şifremi unuttum bağlantısı */
+.forgot-link {
+    display: block; /* Satır blok olarak yer alır */
+    margin-top: 10px; /* Üst boşluk */
+    text-align: right; /* Sağa yasla */
+    font-size: 14px; /* Küçük yazı */
+    text-decoration: none; /* Alt çizgi kaldırılır */
+    color: #0072ff; /* Mavi yazı rengi */
+}
+
+/* Üzerine gelince altı çizilen bağlantı */
+.forgot-link:hover {
+    text-decoration: underline; /* Hover durumunda altı çizilir */
+}
